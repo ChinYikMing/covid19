@@ -1,0 +1,224 @@
+*{
+  /*border: 1px solid;*/
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1584735414166-8c436d5854ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+table th{
+  padding: 10px 15px;
+  background: rgb(91, 57, 57);
+  color: red;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  transition: margin-left 0.5s;
+}
+
+#date {
+  text-align: center;
+}
+
+table {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  transition: display 0.5s;
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#input {
+  width: 300px;
+  font-size: 16px;
+  padding: 12px 20px 12px 18px;
+  border: 2px solid black;
+  margin-bottom: 12px;
+  transition: border-color 1s;
+}
+
+#input:hover {
+  border-color: red;
+}
+
+.total {
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+.total #totalConfirmed {
+  color: #fff;
+}
+.total #totalDeaths {
+  color: rgb(230, 0, 0);
+}
+.total #totalRecovered {
+  color: rgb(34, 200, 18);
+}
+
+#statSearchButton {
+  font-size: 16px;
+  padding: 12px 20px 12px 18px;
+  border: 2px solid black;
+  margin-bottom: 12px;
+  margin-left: 5px;
+  transition: background-color 0.5s;
+}
+
+#statSearchButton:hover {
+  cursor: pointer;
+  background-color: rgb(226, 2, 2);
+}
+
+/* Side Bar */
+#mySideBar {
+  width: 0;
+  height: 750px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+#mySideBar div{
+  display: none;
+  position: absolute;
+  top: 120px;
+  left: 150px;
+}
+
+#about:hover + div, #service:hover + div {
+  display: block;
+  position: absolute;
+  top: 230px;
+  left: 0;
+  width: 300px;
+  line-height: normal;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  z-index: 100;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px rgb(255, 0, 0);
+  transition-delay: 1s;
+}
+
+#mySideBar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  transition: 0.3s;
+}
+
+#mySideBar a:hover {
+  color: #f1f1f1;
+}
+
+#mySideBar #closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#closeButton:hover {
+  background-color: rgb(68, 72, 87);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+#openButton {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: red;
+  border: none;
+  transition: 0.5s;
+}
+
+#openButton:hover {
+  background-color: rgb(68, 72, 87);
+  transform: rotate(10deg);
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  #mySideBar {
+    padding-top: 15px;
+  }
+  #mySideBar a {
+    font-size: 18px;
+  }
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  transition: margin-left 0.5s;
+}
+
+footer a{
+  color: red;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+footer #toTop {
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.5s;
+}
+
+footer #toTop:hover {
+  background-color: rgb(68, 72, 87);
+  color: red;
+  transform: translateX(-10px);
+}
+
+footer #currentPage {
+  padding-top: 10px;
+}
+
+#chartContainer {
+  width: 100%;
+  height: 360px;
+}
+
+

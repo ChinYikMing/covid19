@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Chin Yik Ming">
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <h1>The countries' info which affected by covid-19</h1>
+  </head>
+  <body>
+       <div id="mySideBar">
+         <button id="closeButton">&#215</button>
+         <a href="#" onclick="showMainData()">Main Data</a>
+         <a href="#" onclick="showPlot()">Plot</a>
+         <a href="#" id="about">About</a>
+         <div>
+           <p>This is the data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). Also, Supported by ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).
+           </p>
+         </div>
+         <a href="#" id="service">Services</a>
+         <div>
+           <ul>
+             <li>Find the specific country's info in <strong style="color:red">Main Data</strong></li>
+             <li>See the plot graph in <strong style="color:red">Plot</strong></li>
+             <li>This web page will be added some new features every week</li>
+           </ul>
+         </div>
+      </div>
+       <div id="main">
+        <button id="openButton">&#9776; Menu</button>
+        <div id="search">
+          <input type="text" onkeyup="myMatching()" id="input" placeholder="Search for a country  e.g. Italy">
+        </div>
+         <div class="total">
+           <div id="totalConfirmed">0</div>
+           <div id="totalDeaths">0</div>
+           <div id="totalRecovered">0</div>
+         </div>
+        <div id="date"></div>
+        <div id="tableContainer"></div>
+        <div id="chartContainer"></div>
+       </div>
+    </body>
+  <footer>
+      <p>Builded by Chin Yik Ming</p>
+      <p>Contact Information: <a href="mailto:yikming2222@gmail.com">
+  click to send the email</a></p>
+      <div id="pagination"> 
+        <a href="#" id="page1">1</a>
+        <a href="#" id="page2">2</a>  
+        <a href="#" id="page3">3</a>  
+        <a href="#" id="page4">4</a>  
+        <a href="#" id="page5">5</a> 
+        <div>
+          Page: <span id="currentPage">1</span>
+        </div>
+      </div>
+      <button id="toTop">Back to top</button>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+  <script src="app.js"></script>
+</html>
